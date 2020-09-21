@@ -80,7 +80,7 @@ Tag Docker Image, replace xxxx with your AWS Account number.
 docker tag nodejs-app:latest xxxx.dkr.ecr.us-west-2.amazonaws.com/nodejs-app:latest
 ```
 
-Push Docker image to AWS ECR 
+Push Docker image to AWS ECR, replace xxxx with your AWS Account number.
 
 ```shell
 docker push xxxx.dkr.ecr.us-west-2.amazonaws.com/nodejs-app:latest
@@ -94,7 +94,8 @@ kubectl apply -f metric/metric-server.yaml
 
 ##Step 5 - Deploy Nodejs application to EKS Cluster using Helm Chart
 
-Deploy app with Service AWS NLB (publicly accessible) and exposed to the 80 port. 
+Deploy app with Service AWS NLB (publicly accessible) and exposed to the 80 port, replace xxxx with your AWS Account number.
+
 
 ```shell
 helm install app helm/ --set image.repository=xxxx.dkr.ecr.us-west-2.amazonaws.com/nodejs-app --set image.tag=latest
