@@ -107,3 +107,5 @@ For see the configuration please refer helm/templates/deployment.yaml, helm/temp
 ![Preview](https://raw.githubusercontent.com/shahrukh-s/demo-terraform-eks/master/output.png)
 
 
+##HPA Output
+![Preview](https://raw.githubusercontent.com/shahrukh-s/demo-terraform-eks/master/hpa.png)
