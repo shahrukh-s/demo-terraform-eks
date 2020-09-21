@@ -102,5 +102,7 @@ helm install app helm/ --set image.repository=xxxx.dkr.ecr.us-west-2.amazonaws.c
 
 For see the configuration please refer helm/templates/deployment.yaml, helm/templates/service.yaml and helm/values.yaml 
 
+##Output
+![Preview](https://raw.githubusercontent.com/shahrukh-s/demo-terraform-eks/blob/master/output.png)
 
 
