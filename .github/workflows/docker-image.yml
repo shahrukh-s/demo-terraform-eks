@@ -18,7 +18,7 @@ jobs:
       run: cd node-app && docker build . --file Dockerfile --tag shahrukhs/eks-demo:$(date +%s)
     - name: Push
       run: |
-        docker login --username shahrukhs --password "${DOCKER_REGISTRY_TOKEN}"
+        docker login -u shahrukhs -p "${DOCKER_REGISTRY_TOKEN}"
         docker push shahrukhs/eks-demo:$(date +%s)
       env:
-        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
+        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
