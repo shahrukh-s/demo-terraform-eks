@@ -21,4 +21,4 @@ jobs:
         docker login -u shahrukhs -p "${DOCKER_REGISTRY_TOKEN}"
         docker push shahrukhs/eks-demo:$(date +%s)
       env:
-        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
+        DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
