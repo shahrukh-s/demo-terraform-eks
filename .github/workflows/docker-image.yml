@@ -15,10 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: cd node-app && docker build . --file Dockerfile --tag shahrukhs/eks-demo:${GITHUB_RUN_NUMBER}
+      run: cd node-app && docker build . --file Dockerfile --tag shahrukhs/eks-demo:${GITHUB_RUN_NUMBER} && docker build . --file Dockerfile --tag shahrukhs/eks-demo:latest
     - name: Push
       run: |
         docker login -u shahrukhs -p "${DOCKER_REGISTRY_TOKEN}"
         docker push shahrukhs/eks-demo:${GITHUB_RUN_NUMBER}
+        docker push shahrukhs/eks-demo:latest
       env:
         DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
